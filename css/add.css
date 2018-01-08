@@ -1,0 +1,96 @@
+			*{
+				margin: 0;
+				padding: 0;
+				font-size: 62.5%;
+			}
+			
+			body{
+    			background-color: #EEEEEE;
+    		}
+			.header {
+				width: 100%;
+				height: 5rem;
+				border-bottom: 0.1rem solid #E2E2E2;
+				background-color: #F7F7F7;
+			}
+			
+			.header>div {
+				float: left;
+			}
+			
+			.back {
+				height: 5rem;
+				width: auto;
+				margin-left: 3%;
+			}
+			
+			.back>img {
+				width: 70%;
+				margin-top: 1.8rem;
+			}
+			
+			.orderSettle {
+				width: 70%;
+				height: 5rem;
+				text-align: center;
+				line-height: 5rem;
+				font-size: 1.7rem;
+				color: #606060;
+			}
+		
+			.main{
+				width: 100%;
+				height:auto;
+				background-color: white;
+			}
+			.main>div{
+				width: 100%;
+				height: 4rem;
+				border-bottom: 0.2rem solid #ECECEC;
+				
+			}
+			.main>div>div{
+				float: left;	
+			}
+			.left{
+				width: 22%;
+				height: 100%;
+				font-size: 1.5rem;
+				line-height: 4rem;
+				text-align: right;
+			}
+			.right{
+				margin-left: 7%;
+				width: 71%;
+				height: 100%;
+			}
+			.right>input{
+				width: 100%;
+				height: 100%;
+				font-size: 1.6rem;
+				border: none;
+				outline: none;
+			}
+			.right>select{
+				width: 85%;
+				height: 100%;
+				border: none;
+				outline: none;
+			}
+			/*底部按钮*/
+			.btn{
+				width: 100%;
+				height: 4rem;
+				margin-top:1.5rem;
+			}
+			.btn>button{
+				width: 70%;
+				height: 3.5rem;
+				margin-left: 15%;
+				border: none;
+				outline: none;
+				border-radius: 0.5rem;
+				color: #EEEEEE;
+				background-color: #F15353;
+				font-size: 1.5rem;
+			}

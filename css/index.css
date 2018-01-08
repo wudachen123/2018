@@ -1,0 +1,324 @@
+			* {
+				margin: 0;
+				padding: 0;
+				font-size: 62.5%;
+			}
+			body{
+				height: auto;
+			}
+			
+			/*顶部*/
+			.header {
+				width: 100%;
+				height: 5rem;
+				border-bottom: 0.1rem solid #E2E2E2;
+				background-color: #F7F7F7;
+			}
+			
+			.header>div {
+				float: left;
+			}
+			
+			.back {
+				height: 5rem;
+				width: auto;
+				margin-left: 3%;
+			}
+			
+			.back>img {
+				width: 70%;
+				margin-top: 1.8rem;
+			}
+			
+			.orderSettle {
+				width: 70%;
+				height: 5rem;
+				text-align: center;
+				line-height: 5rem;
+				font-size: 1.7rem;
+				color: #606060;
+			}
+   
+			/*中间商品部分*/
+			.mainGoods{
+				width: 100%;
+				height: 20rem;
+				background-color: #FAFAFA;
+			}
+			.addAddress{
+				width: 100%;
+				height: 7rem;
+				position: relative;
+			}
+			.addAddress>div{
+				float: left;
+			}
+			.addLeft{
+				height: 100%;
+				width: auto;
+				margin-left: 0.5rem;
+				display: flex;
+				align-items: center;
+			}
+			.addLeft>img{
+				
+			}
+			.addCenter{
+				height: 100%;
+				width: auto;
+				line-height: 7rem;
+				margin-left: 1rem;
+				font-size: 1.4rem;
+			}
+			.addRight{
+				height: 100%;
+				width: auto;
+				position: absolute;
+				right: 0;
+			}
+			.addRight>img{
+				width: 70%;
+				margin-top:100%;
+			}
+			.line{
+				width: 100%;
+				height: 0.5rem;
+				background-image: url(../img/1.png);
+			}
+			.goods{
+				width: 100%;
+				height:7.5rem;
+				margin-top: 1rem;
+				
+			}
+			.goods>div{
+				float: left;
+			}
+			.goodsLeft{
+				width: 20%;
+				height:7.5rem;
+				margin-left: 5%;
+				margin-top: 0.5rem;
+			}
+			.goodsLeft>img{
+				width: 100%;
+			}
+			.goodsCenter{
+				width: 45%;
+				height:7.5rem;
+				margin-right: 3%;
+				margin-left: 5%;
+				font-size: 1.5rem;
+			}
+			.goodsRight{
+				width:19%;
+				height:4rem;
+				margin-right: 3%;
+				color: #FF4444;
+			} 
+			.goodsRight>span:nth-of-type(1){
+				font-size: 1.5rem;
+			}
+			.price{
+				font-size: 1.5rem;
+			}
+			.count{
+				width: 17%;
+				margin-right: 3%;
+				height: 2.5rem;
+				text-align: center;
+				margin-top: 1rem;
+				color: #7D6666;
+			}
+			.count>span:nth-of-type(1){
+				font-size: 1.4rem;
+				margin-right: 0.3rem;
+			}
+			.countNum{
+				font-size: 1.4rem;
+			}
+			/*中间信息部分*/
+			.mainInf{
+				width: 100%;
+				height: auto;				
+			}	
+			.payMethod,.goMethod{
+				width: 100%;
+				height: 5rem;
+				border-bottom: 0.1rem solid #F2F2F2;
+			}
+			.payMethod>div:nth-of-type(1),.goMethod>div:nth-of-type(1){
+				width: 25%;
+				height: 100%;
+				float: left;
+				margin-left: 5%;
+				line-height:5rem;
+				font-size: 1.4rem;
+			}
+			.payMethod>div:nth-of-type(2),.goMethod>div:nth-of-type(2){
+				width: 25%;
+				height: 100%;
+				float: left;
+				margin-left: 45%;
+				text-align: center;
+				line-height: 5rem;
+				font-size: 1.4rem;
+				color: #A1A1A1;
+			}
+			.caculateInf{
+				width: 100%;
+				height: 7rem;
+				padding-top:2rem;
+				
+			}
+			.caculateInf>.cacu1{
+				width: 30%;
+				height: auto;
+				margin-left: 5%;
+				font-size: 1.6rem;
+				
+			}
+			.caculateInf>.cacu2{
+				width: 40%;
+				height: auto;
+				margin-left: 5%;
+				margin-top: 1.9rem;
+				font-size: 1.4rem;
+				float: left;
+			}
+			.caculateInf>.cacu3{
+				width: 25%;
+				height: auto;;
+				float: left;
+				margin-top: 1.9rem;
+				font-size: 1.4rem;
+				margin-left: 30%;
+				text-align: center;
+			}
+			.cacu3>span{
+				font-size: 1.4rem;
+			}
+			.logoSupp{
+				width: 100%;
+				height: 19rem;
+				background-color: #F8F8F8;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.logoSupp>img{
+				margin-top: -7rem;
+			}
+			
+			/*底部*/
+			.footer {
+				width: 100%;
+				height: 5rem;
+				border-top: 0.1rem solid #E5E5E5;
+				position: fixed;
+				bottom: 0;
+				background-color: white;
+			}
+			
+			.footer>div {
+				float: left;
+			}
+			
+			.btnOrder {
+				text-align: center;
+				background-color: #FF4444;
+				width: 30%;
+				height: 100%;
+				font-size: 1.3rem;
+				color: white;
+				line-height: 5rem;
+				position: absolute;
+				right: 0;
+			}
+			
+			.shouldPay {
+				height: 100%;
+				width: auto;
+				text-align: center;
+				line-height: 5rem;
+				color: #666666;
+				margin-left: 25%;
+			}
+			
+			.money {
+				width: auto;
+				height: 100%;
+				text-align: center;
+				line-height: 5rem;
+				color: #FF4444;
+				margin-left: 3%;
+			}
+			
+			.money>span:nth-of-type(1) {
+				font-size: 1.6rem;
+			}
+			
+			.yuan {
+				font-size: 1.6rem;
+				font-weight: 600;
+			}
+			
+
+			/*改动部分*/
+			.peopleInf{
+				width: 100%;
+				height: 2rem;
+				margin-top: 1rem;
+			}
+			.adress{
+				width: 100%;
+				height: 2rem;;
+				margin-top: 1rem;
+			}
+			.peopleInf>div{
+				float: left;
+			}
+			.peopleInf_left{
+				width:7%;
+				height: 100%;
+				margin-left: 5%;
+			}
+			.peopleInf_left>img{
+				height: 100%;
+			}
+			.peopleInf_center{
+				width:35%;
+				height: 100%;
+			}
+			.peopleInf_center>span{
+				line-height: 2rem;
+				font-size: 1.4rem;	
+				color: #707070;			
+			}
+			.peopleInf_right{
+				width:32%;
+				height: 100%;
+				margin-left: 21%;
+				font-size: 1.4rem;
+				line-height: 2rem;
+				color: #707070;
+			}
+			.adress>div{
+				float: left;
+			}
+			.adress_left{
+				width: auto;
+				height: 100%;
+				line-height: 2rem;
+				margin-left: 12%;
+				margin-right: 2%;
+				color: #666666;
+			}
+			.adress_right{
+				width: auto;
+				height: 100%;
+				line-height: 2rem;
+				color: #666666;
+			}
+			
+		

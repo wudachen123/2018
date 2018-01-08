@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>我的订单</title>
+		<script type="text/javascript">
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"		
+			});
+		</script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+				font-size: 62.5%;
+			}
+			
+			body {
+				background-color: #EEEEEE;
+			}
+			
+			.header {
+				width: 100%;
+				height: 5rem;
+				border-bottom: 0.1rem solid #E2E2E2;
+				background-color: #F7F7F7;
+			}
+			
+			.header>div {
+				float: left;
+			}
+			
+			.back {
+				height: 5rem;
+				width: auto;
+				margin-left: 3%;
+			}
+			
+			.back>img {
+				width: 70%;
+				margin-top: 1.8rem;
+			}
+			
+			.orderSettle {
+				width: 70%;
+				height: 5rem;
+				text-align: center;
+				line-height: 5rem;
+				font-size: 1.7rem;
+				color: #606060;
+			}
+			
+			.top {
+				width: 100%;
+				height: 4rem;
+				background-color: #ffffff;
+			}
+			
+			.top>ul {
+				width: 100%;
+			}
+			
+			.top>ul>li {
+				list-style: none;
+				float: left;
+				text-align: center;
+				font-size: 1.6rem;
+				line-height: 4rem;
+				width: 25%;
+				height: 3.7rem;
+				color: #919191;
+				margin-bottom: 0.3rem;
+			}
+			
+			.mian1 {
+				width: 100%;
+				height: 24rem;
+				background-color: white;
+				margin-top: 0.5rem;
+			}
+			
+			.mian1Small {
+				width: 94%;
+				height: 100%;
+				margin-left: 3%;
+			}
+			
+			.mian1SmallTop {
+				width: 100%;
+				height: 2.5rem;
+				position: relative;
+			}
+			
+			.line2 {
+				width: 100%;
+				height: 0.1rem;
+				background-color: #EFEFEF;
+			}
+			
+			.line3 {
+				width: 100%;
+				height: 0.1rem;
+				background-color: #EFEFEF;
+				margin-top: 2rem;
+			}
+			
+			.mstLeft {
+				font-size: 1.2rem;
+				position: absolute;
+				top: 0.5rem;
+				color: #73697C;
+			}
+			
+			.mstRight {
+				position: absolute;
+				font-size: 1.2rem;
+				right: 0;
+				top: 0.5rem;
+				color: #BBBBBB;
+			}
+			
+			.mian1SmallCenter {
+				width: 100%;
+				height: 10rem;
+				position: relative;
+			}
+			
+			.mscLeft {
+				display: inline-block;
+				width: 28%;
+				height: 7rem;
+				top: 1.5rem;
+				position: absolute;
+			}
+			
+			.mscLeft>img {
+				width: 100%;
+				height: 7rem;
+				margin-bottom: 1.8rem;
+			}
+			
+			.mscRight {
+				width: 66%;
+				height: 9rem;
+				left: 32%;
+				top: 1.5rem;
+				position: absolute;
+			}
+			
+			.mscRight1 {
+				width: 100%;
+				height: 2.6rem;
+				color: #5A605D;
+				;
+				font-weight: 600;
+			}
+			
+			.mscRight2 {
+				width: 100%;
+				height: 1.6rem;
+				margin-top: 0.8rem;
+			}
+			
+			.mscRight2>div {
+				float: left;
+			}
+			
+			.mscRight2>div:nth-of-type(1) {
+				color: #999999;
+			}
+			
+			.mscRight2>div:nth-of-type(2) {
+				color: #7A6874;
+			}
+			
+			.price {
+				color: #7A6874;
+			}
+			
+			.mscRight3 {
+				width: 100%;
+				height: 1.6rem;
+			}
+			
+			.mscRight3>div {
+				float: left;
+			}
+			
+			.mscRight3>div:nth-of-type(1) {
+				color: #999999;
+			}
+			
+			.spec {
+				color: #7A6874;
+			}
+			
+			.mscRight4 {
+				width: 100%;
+				height: 1.6rem;
+				margin-top: 0.8rem;
+			}
+			
+			.mscRight4>div {
+				float: left;
+			}
+			
+			.mscRight4>div:nth-of-type(1) {
+				color: #999999;
+			}
+			
+			.mscRight4>div:nth-of-type(3) {
+				color: #7A6874;
+			}
+			
+			.count {
+				color: #5A605D;
+			}
+			
+			.mian1SmallButtom {
+				width: 100%;
+			}
+			
+			.allprice {
+				width: 35%;
+				height: 2.5rem;
+				margin-left: 60%;
+				line-height: 2.5rem;
+				margin-top: 0.4rem;
+				text-align: right;
+				padding-left: 5%;
+			}
+			
+			.allprice>div {
+				float: left;
+			}
+			
+			.allprice>div:nth-of-type(1) {
+				font-size: 1.4rem;
+				color: #AEAEAE;
+			}
+			
+			.allprice>div:nth-of-type(2) {
+				font-size: 1.8rem;
+				color: #F15050;
+			}
+			
+			.payprice {
+				font-size: 1.8rem;
+				color: #F15050;
+			}
+			
+			.mian1SmallButtom>button {
+				width: 27%;
+				height: 2.5em;
+				background-color: #F15050;
+				color: white;
+				outline: none;
+				border: none;
+				border-radius: 0.5rem;
+				font-size: 1.6rem;
+				position: absolute;
+				right: 5%;
+				margin-top: 0.8rem;
+			}
+			
+			#active {
+				color: #F15050;
+				border-bottom: 0.25rem solid #F15050;
+			}
+			
+			
+			/*第二个选项*/
+			.main2_main{
+				width: 100%;
+				height: auto;
+			}
+			.main3_main{
+				width: 100%;
+				height: auto;
+			}
+			.main4_main{
+				width: 100%;
+				height: auto;
+			}
+			.img2{
+				width: 100%;
+				height: auto;
+				margin-top: 4rem;
+				text-align: center;
+			}
+			.btn2{
+				width: 100%;
+				height: 4rem;
+				margin-top: 2rem;
+				text-align: center;
+			}
+			.btn3{
+				width: 100%;
+				height: 4rem;
+				margin-top: 2rem;
+				text-align: center;
+			}
+			.btn4{
+				width: 100%;
+				height: 4rem;
+				margin-top: 2rem;
+				text-align: center;
+			}
+			.btn2>button,.btn3>button,.btn4>button{
+				width: 23%;
+				height: 2.8rem;
+				background-color: #EEEEEE;
+				color: #5B5B5B;
+				outline: none;
+				border: 0.02rem solid #DCDCDC;
+				border-radius: 0.3rem;
+				font-size: 1.6rem;
+			}
+		
+		</style>
+
+		<body>
+			<!--头部-->
+			<div class="header">
+				<div class="back"><img src="img/back.png" /></div>
+				<div class="orderSettle">我的订单</div>
+			</div>
+
+			<div class="top">
+				<ul>
+					<li id="active">全部</li>
+					<li>待发货</li>
+					<li>待收货</li>
+					<li>已收货</li>
+				</ul>
+			</div>
+
+			<div class="main">
+				<div class="mian1" style="display: block;">
+					<div class="mian1Small">
+						<div class="mian1SmallTop">
+							<div class="mstLeft">20171010151543000000001</div>
+							<div class="mstRight">2017-10-10&nbsp;15:15:43</div>
+						</div>
+						<div class="line2"></div>
+						<div class="mian1SmallCenter">
+							<div class="mscLeft"><img src="img/22.png" /></div>
+							<div class="mscRight">
+								<div class="mscRight1">春季包头中粗跟尖头浅口单鞋女鞋2017新款百搭韩版侧空低跟单鞋子</div>
+								<div class="mscRight2">
+									<div>价格：</div>
+									<div>¥</div>
+									<div class="price">269.00</div>
+								</div>
+								<div class="mscRight3">
+									<div>规格：</div>
+									<div class="spec">XXL</div>
+								</div>
+								<div class="mscRight4">
+									<div>数量:</div>
+									<div class="count">1</div>
+									<div>件</div>
+								</div>
+							</div>
+						</div>
+						<div class="line3"></div>
+						<div class="mian1SmallButtom">
+							<div class="allprice">
+								<div>总价&nbsp;</div>
+								<div>¥&nbsp;</div>
+								<div class="payprice">269.00</div>
+							</div>
+							<button>去支付</button>
+						
+						</div>
+					</div>
+				</div>
+				<div class="mian2" style="display: none;">
+					<div class="main2_main">
+						<div class="img2">
+							<img src="img/noorder.png"/>
+						</div>
+						<div class="btn2">
+							<button>随便逛逛</button>
+						</div>	
+					</div>
+				</div>
+				<div class="mian3" style="display: none;">
+				<div class="main3_main">
+						<div class="img2">
+							<img src="img/noorder.png"/>
+						</div>
+						<div class="btn3">
+							<button>随便逛逛</button>
+						</div>	
+					</div>
+				</div>
+				<div class="mian4" style="display: none;">
+					<div class="main4_main">
+						<div class="img2">
+							<img src="img/noorder.png"/>
+						</div>
+						<div class="btn4">
+							<button>随便逛逛</button>
+						</div>	
+					</div>
+				</div>
+			</div>
+
+		</body>
+		<script type="text/javascript">
+			function select(){		
+				var Oul = document.querySelector('.top>ul');
+				var ali = Oul.getElementsByTagName('li');
+				var aDiv = document.querySelectorAll('.main>div');
+				for(var i = 0; i < ali.length; i++) {
+					ali[i].index = i; 
+					ali[i].onclick = function() {
+						for(var i = 0; i < ali.length; i++) {
+							ali[i].id = ''; 
+							aDiv[i].style.display = 'none';
+						}
+						this.id = 'active'; 
+						aDiv[this.index].style.display = 'block';
+					};
+				} 
+			}
+			select();
+			
+		</script>
+	
+</html>

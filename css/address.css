@@ -1,0 +1,137 @@
+*{
+    		margin: 0;
+    		padding: 0;
+    		font-size: 62.5%;
+    	}
+    	body{
+    		background-color: #EEEEEE;
+    	}
+    	/*顶部*/
+    		.header {
+				width: 100%;
+				height: 5rem;
+				border-bottom: 0.1rem solid #E2E2E2;
+				background-color: #F7F7F7;
+			}
+			
+			.header>div {
+				float: left;
+			}
+			
+			.back {
+				height: 5rem;
+				width: auto;
+				margin-left: 3%;
+			}
+			
+			.back>img {
+				width: 70%;
+				margin-top: 1.8rem;
+			}
+			
+			.orderSettle {
+				width: 70%;
+				height: 5rem;
+				text-align: center;
+				line-height: 5rem;
+				font-size: 1.7rem;
+				color: #606060;
+			}
+			
+			/*中间*/
+			.main{
+				width:100%;
+				height: auto; 
+			}
+			.main_top{
+				width: 100%;
+				height:7rem;
+				display: flex;
+				justify-content: center;
+				margin-top: 1rem;
+			}
+			.main_top>img{
+				height: 100%;
+			}
+			.main_center{
+				width: 100%;
+				height: 3rem;
+				margin-top: 1rem;
+				text-align: center;
+				line-height: 3rem;
+				font-size: 1.5rem;
+				color: #8F8F8F;
+			}
+			.main_bottom{
+				width: 100%;
+				height: 4rem;
+				margin-top: 3rem;
+			}
+			.main_bottom>button{
+				width: 70%;
+				height: 3.5rem;
+				margin-left: 15%;
+				border: none;
+				outline: none;
+				border-radius: 0.5rem;
+				color: #EEEEEE;
+				background-color: #F15353;
+				font-size: 1.5rem;
+			}
+			
+			/*收货地址*/
+			.main2{
+				width: 100%;
+			}
+			.list{
+				width: 100%;
+				margin-top: 0.8rem;
+				background-color: white;
+				height: 9.9rem;
+				position: relative;
+			}
+			.list>div{
+				width: 100%;
+				height: 3rem;
+			}
+			.main2>.list>.main2_img{
+				width: 100%;
+				height: 0.5rem;
+				background-image: url(img/1.png);
+			}
+			.main2_top>div,.main2_center>div,.main2_buttom>div{
+				float: left;
+				font-size: 1.4rem;
+				line-height: 3rem;
+				color: #333333;
+				margin-left: 0.5rem;
+			}
+			.main2_buttom>div>div{
+				float: left;
+				font-size: 1.4rem;
+				line-height: 3rem;
+				color: #333333;
+			}
+			.main2_center,.main2_buttom{
+				border-top:0.2rem solid #F0F0F0 ;
+			}
+			.main2_top>ul{
+				float: right;
+			}
+			.main2_top>ul>li{
+				float: left;
+				list-style: none;
+				font-size: 1.4rem;
+				color: #333333;
+				line-height: 3rem;
+			}
+			#defaultLogo{
+				width:1.5rem;
+				height:1.5rem;
+				position: absolute;
+				right: 0.5rem;
+				bottom: 0.5rem;
+			}
+			#defaultLogo>img{
+				width: 100%;
+			}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>niushop首页</title>
+		<script type="text/javascript">
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"		
+			});
+		</script>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<style type="text/css">
+			.addAddress3{
+				background-color: white;
+				height: 6rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--最顶部-->
+		<div class="header">
+			<div class="back"><img src="img/back.png" /></div>
+			<div class="orderSettle">订单结算</div>
+		</div>
+		
+		<!--中间商品部分-->
+		<div class="mainGoods">
+			<div class="addAddress" style="display: block;">
+				<div class="addLeft"><img src="img/address.png"/></div>
+				<div class="addCenter">新增收货地址</div>
+				<div class="addRight"><img src="img/right.png"/></div>
+			</div>
+			<div class="addAddress2" style="display: none;">
+				<div class="peopleInf">
+					<div class="peopleInf_left"><img src="img/pal.png"/></div>
+					<div class="peopleInf_center"><span>收货人：</span><span>张伟</span></div>
+					<div class="peopleInf_right">15912345678</div>
+				</div>
+				<div class="adress">
+					<div class="adress_left">收货地址:</div>
+					<div class="adress_right">广东省&nbsp;广州市&nbsp;白云区&nbsp;锡橙路168号</div>
+				</div>
+			</div>
+			<div class="line"></div>
+			<div class="goods">
+				<div class="goodsLeft"><img src="img/22.png"/></div>
+				<div class="goodsCenter">印花显瘦A字碎花真丝连衣裙女夏季2017新款欧洲站气质裙子女装潮</div>
+				<div class="goodsRight"><span>¥</span><span class="price">359.00</span></div>
+				<div class="count"><span>x</span><span class="countNum">1</span></div>
+			</div>
+		</div>
+                            
+		<!--中间信息部分-->
+		<div class="mainInf">
+			<div class="payMethod"><div>支付方式</div><div>货到付款</div></div>
+			<div class="goMethod"><div>配送方式</div><div>商家配送</div></div>
+			<div class="caculateInf">
+				<div class="cacu1">结算信息</div>
+				<div class="cacu2">共<span>1</span>种商品&nbsp;总计</div>
+				<div class="cacu3"><span>¥</span><span>359.00</span></div>
+			</div>			
+		</div>
+
+       
+		<!--页尾-->
+		<div class="logoSupp">
+			<img src="img/logo.png"/>
+		</div>
+		
+		<!--底部-->
+		<div class="footer">
+			<div class="shouldPay">应付金额&nbsp;:</div>
+			<div class="money"><span>¥</span><span class="yuan">359.00</span></div>
+			<div class="btnOrder">提交订单</div>
+		</div>
+	</body>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+</html>
